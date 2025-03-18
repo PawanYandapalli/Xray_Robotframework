@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on win32)" generated="2025-03-18T15:05:25.224288" rpa="false" schemaversion="5">
+<suite id="s1" name="EditPersonal" source="c:\Users\pawan\Downloads\Automation\EditPersonal.robot">
+<test id="s1-t1" name="Login and Edit Personal Information" line="20">
+<kw name="Open Browser And Login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:25.683085" level="INFO">Opening browser 'chrome' to base url 'https://impl.wd12.myworkday.com/wday/authgwy/wyndenstark_dpt1/login.htmld'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-18T15:05:25.683085" elapsed="3.130860"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-18T15:05:28.813945" elapsed="0.040435"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:28.854380" elapsed="0.262658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:29.118038" level="INFO">Typing text 'lmcneil' into text field 'xpath://input[@aria-label='Username']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>lmcneil</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:29.117038" elapsed="0.198189"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:29.315227" level="INFO">Typing password into text field 'xpath://input[@aria-label='Password']'.</msg>
+<msg time="2025-03-18T15:05:29.367811" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>Theakitt777!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:29.315227" elapsed="0.154068"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:29.471302" level="INFO">Sending key(s) ('RETURN',) to xpath://input[@aria-label='Password'] element.</msg>
+<msg time="2025-03-18T15:05:29.783747" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-03-18T15:05:29.784746" level="INFO">Releasing special key RETURN.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-18T15:05:29.470296" elapsed="0.353580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:29.823876" elapsed="2.186190"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:32.327249" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login_Screenshot.png"&gt;&lt;img src="Login_Screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Login_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-18T15:05:32.011066" elapsed="0.317182"/>
+</kw>
+<doc>Open the browser, navigate to the URL, and log in.</doc>
+<status status="PASS" start="2025-03-18T15:05:25.682083" elapsed="6.647171"/>
+</kw>
+<kw name="Open Search Tab And Enter Query">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Locate And Interact With Search Input">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:33.971883" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:32.333251" elapsed="1.883236"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-18T15:05:34.217472" elapsed="0.349395"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-18T15:05:34.568081" elapsed="0.078587"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:34.648181" elapsed="0.094722"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:34.744903" level="INFO">Typing text 'Edit Personal Information' into text field 'xpath://input[@data-automation-id="globalSearchInput"]'.</msg>
+<msg time="2025-03-18T15:05:35.475978" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-954.png"&gt;&lt;img src="selenium-screenshot-954.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-18T15:05:35.477126" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60F04FE45+26629]
+	(No symbol) [0x00007FF60EFB6010]
+	(No symbol) [0x00007FF60EE4914C]
+	(No symbol) [0x00007FF60EE990F4]
+	(No symbol) [0x00007FF60EE9712C]
+	(No symbol) [0x00007FF60EEC7AAA]
+	(No symbol) [0x00007FF60EE92156]
+	(No symbol) [0x00007FF60EEC7CC0]
+	(No symbol) [0x00007FF60EEF0169]
+	(No symbol) [0x00007FF60EEC7883]
+	(No symbol) [0x00007FF60EE90550]
+	(No symbol) [0x00007FF60EE91803]
+	GetHandleVerifier [0x00007FF60F3A72BD+3529853]
+	GetHandleVerifier [0x00007FF60F3BDA22+3621858]
+	GetHandleVerifier [0x00007FF60F3B24D3+3575443]
+	GetHandleVerifier [0x00007FF60F11B77A+860474]
+	(No symbol) [0x00007FF60EFC088F]
+	(No symbol) [0x00007FF60EFBCBC4]
+	(No symbol) [0x00007FF60EFBCD66]
+	(No symbol) [0x00007FF60EFAC2C9]
+	BaseThreadInitThunk [0x00007FFF3361E8D7+23]
+	RtlUserThreadStart [0x00007FFF34B3BF6C+44]
+</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>Edit Personal Information</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-03-18T15:05:34.743904" elapsed="0.760512">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60F04FE45+26629]
+	(No symbol) [0x00007FF60EFB6010]
+	(No symbol) [0x00007FF60EE4914C]
+	(No symbol) [0x00007FF60EE990F4]
+	(No symbol) [0x00007FF60EE9712C]
+	(No symbol) [0x00007FF60EEC7AAA]
+	(No symbol) [0x00007FF60EE92156]
+	(No symbol) [0x00007FF60EEC7CC0]
+	(No symbol) [0x00007FF60EEF0169]
+	(No symbol) [0x00007FF60EEC7883]
+	(No symbol) [0x00007FF60EE90550]
+	(No symbol) [0x00007FF60EE91803]
+	GetHandleVerifier [0x00007FF60F3A72BD+3529853]
+	GetHandleVerifier [0x00007FF60F3BDA22+3621858]
+	GetHandleVerifier [0x00007FF60F3B24D3+3575443]
+	GetHandleVerifier [0x00007FF60F11B77A+860474]
+	(No symbol) [0x00007FF60EFC088F]
+	(No symbol) [0x00007FF60EFBCBC4]
+	(No symbol) [0x00007FF60EFBCD66]
+	(No symbol) [0x00007FF60EFAC2C9]
+	BaseThreadInitThunk [0x00007FFF3361E8D7+23]
+	RtlUserThreadStart [0x00007FFF34B3BF6C+44]
+</status>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T15:05:35.504416" elapsed="0.001001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>Search_Query_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-03-18T15:05:35.505417" elapsed="0.000999"/>
+</kw>
+<status status="FAIL" start="2025-03-18T15:05:32.332311" elapsed="3.174105">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60F04FE45+26629]
+	(No symbol) [0x00007FF60EFB6010]
+	(No symbol) [0x00007FF60EE4914C]
+	(No symbol) [0x00007FF60EE990F4]
+	(No symbol) [0x00007FF60EE9712C]
+	(No symbol) [0x00007FF60EEC7AAA]
+	(No symbol) [0x00007FF60EE92156]
+	(No symbol) [0x00007FF60EEC7CC0]
+	(No symbol) [0x00007FF60EEF0169]
+	(No symbol) [0x00007FF60EEC7883]
+	(No symbol) [0x00007FF60EE90550]
+	(No symbol) [0x00007FF60EE91803]
+	GetHandleVerifier [0x00007FF60F3A72BD+3529853]
+	GetHandleVerifier [0x00007FF60F3BDA22+3621858]
+	GetHandleVerifier [0x00007FF60F3B24D3+3575443]
+	GetHandleVerifier [0x00007FF60F11B77A+860474]
+	(No symbol) [0x00007FF60EFC088F]
+	(No symbol) [0x00007FF60EFBCBC4]
+	(No symbol) [0x00007FF60EFBCD66]
+	(No symbol) [0x00007FF60EFAC2C9]
+	BaseThreadInitThunk [0x00007FFF3361E8D7+23]
+	RtlUserThreadStart [0x00007FFF34B3BF6C+44]
+</status>
+</kw>
+<kw name="Locate And Interact With Search Input">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:40.508574" elapsed="0.028281"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-18T15:05:40.537897" elapsed="0.296798"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-18T15:05:40.834695" elapsed="0.039919"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:40.875618" elapsed="0.057480"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:40.934142" level="INFO">Typing text 'Edit Personal Information' into text field 'xpath://input[@data-automation-id="globalSearchInput"]'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>Edit Personal Information</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:40.934142" elapsed="0.222090"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:41.157227" level="INFO">Sending key(s) ('RETURN',) to xpath://input[@data-automation-id="globalSearchInput"] element.</msg>
+<msg time="2025-03-18T15:05:41.476970" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-03-18T15:05:41.477975" level="INFO">Releasing special key RETURN.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-18T15:05:41.157227" elapsed="0.960968"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:43.040065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Search_Query_Screenshot.png"&gt;&lt;img src="Search_Query_Screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Search_Query_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-18T15:05:42.118195" elapsed="0.921870"/>
+</kw>
+<status status="PASS" start="2025-03-18T15:05:40.507556" elapsed="2.534922"/>
+</kw>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Locate And Interact With Search Input</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-18T15:05:32.331249" elapsed="10.712279"/>
+</kw>
+<doc>Locate the global search input field and enter a query.</doc>
+<status status="PASS" start="2025-03-18T15:05:32.330252" elapsed="10.714263"/>
+</kw>
+<kw name="Select Edit Personal Information From Search Results">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDIT_PERSONAL_INFO}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:43.049514" elapsed="0.762118"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:43.813792" level="INFO">Clicking element 'xpath://a[text()='Edit Personal Information']'.</msg>
+<arg>${EDIT_PERSONAL_INFO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:43.812650" elapsed="0.374662"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:44.411501" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Select_Edit_Personal_Info_Screenshot.png"&gt;&lt;img src="Select_Edit_Personal_Info_Screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Select_Edit_Personal_Info_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-18T15:05:44.188412" elapsed="0.223089"/>
+</kw>
+<doc>Select the "Edit Personal Information" option from search results.</doc>
+<status status="PASS" start="2025-03-18T15:05:43.046515" elapsed="1.366005"/>
+</kw>
+<kw name="Handle Edit Personal Information Popup">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[@data-automation-widget="wd-popup"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:44.414516" elapsed="0.504315"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${POPUP_PERSON_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:44.919827" elapsed="0.033585"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${POPUP_PERSON_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:44.953412" elapsed="0.181471"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:45.136872" level="INFO">Typing text 'Ben Adams' into text field 'xpath://div[@data-automation-widget="wd-popup"]//input[@placeholder='Search']'.</msg>
+<arg>${POPUP_PERSON_FIELD}</arg>
+<arg>${person_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:45.135875" elapsed="0.314348"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:45.454209" level="INFO">Sending key(s) ('RETURN',) to xpath://div[@data-automation-widget="wd-popup"]//input[@placeholder='Search'] element.</msg>
+<msg time="2025-03-18T15:05:45.819558" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-03-18T15:05:45.820556" level="INFO">Releasing special key RETURN.</msg>
+<arg>${POPUP_PERSON_FIELD}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-18T15:05:45.452217" elapsed="0.416635"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:05:50.869986" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:05:45.868852" elapsed="5.002160"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:51.053155" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Handle_Popup_Screenshot.png"&gt;&lt;img src="Handle_Popup_Screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Handle_Popup_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-18T15:05:50.872011" elapsed="0.181144"/>
+</kw>
+<arg>${PERSON_NAME}</arg>
+<doc>Handle the popup modal to select a person by name.</doc>
+<status status="PASS" start="2025-03-18T15:05:44.413516" elapsed="6.639639"/>
+</kw>
+<kw name="Click OK Button to Proceed">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${OK_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.055672" elapsed="0.022219"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${OK_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.078888" elapsed="0.307967"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:51.387852" level="INFO">Clicking button 'xpath://button[@data-automation-id="wd-CommandButton_uic_okButton" and @title="OK"]'.</msg>
+<arg>${OK_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.386855" elapsed="0.245177"/>
+</kw>
+<doc>Click the "OK" button to proceed after handling the popup modal.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.054197" elapsed="0.577835"/>
+</kw>
+<kw name="Scroll Down to Comment Section and Submit">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:05:54.635713" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.635033" elapsed="3.000680"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${COMMENT_BOX}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:05:54.636788" elapsed="0.060185"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${COMMENT_BOX}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-18T15:05:54.697995" elapsed="0.347673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:55.048569" level="INFO">Typing text 'TEST' into text field 'xpath://textarea[@data-automation-id="textAreaField"]'.</msg>
+<arg>${COMMENT_BOX}</arg>
+<arg>TEST</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:05:55.047102" elapsed="0.307708"/>
+</kw>
+<doc>Scroll down to locate the comment section, enter a comment, and submit it.</doc>
+<status status="PASS" start="2025-03-18T15:05:51.634029" elapsed="3.720781"/>
+</kw>
+<kw name="Wait After Entering Comment">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:05:58.359874" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:05:55.358230" elapsed="3.002157"/>
+</kw>
+<doc>Add a wait time after entering a comment for stability.</doc>
+<status status="PASS" start="2025-03-18T15:05:55.355817" elapsed="3.005701"/>
+</kw>
+<kw name="Scroll To Bottom Before Submit">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:05:58.365501" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-18T15:05:58.363507" elapsed="0.021999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:06:01.387100" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:05:58.386501" elapsed="3.000599"/>
+</kw>
+<doc>Scroll to the bottom of the page before interacting with the submit button.</doc>
+<status status="PASS" start="2025-03-18T15:05:58.362503" elapsed="3.025118"/>
+</kw>
+<kw name="Click Submit Button to Complete Action">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SUBMIT_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-18T15:06:01.389436" elapsed="0.043772"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:06:01.433810" level="INFO">Clicking button 'xpath://button[contains(@title, 'Submit')]'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:06:01.433208" elapsed="0.187686"/>
+</kw>
+<doc>Locate and click the Submit button successfully.</doc>
+<status status="PASS" start="2025-03-18T15:06:01.388724" elapsed="0.232710"/>
+</kw>
+<kw name="Click View Details After Submission">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VIEW_DETAILS_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T15:06:01.623056" elapsed="0.958662"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:06:02.583716" level="INFO">Clicking button 'xpath://button[@data-uxi-button-type='view-detail' and contains(@class, 'ViewDetailsButton')]'.</msg>
+<arg>${VIEW_DETAILS_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:06:02.581718" elapsed="0.402507"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:06:05.985523" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:06:02.984225" elapsed="3.001298"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:06:06.180622" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="View_Details_Screenshot.png"&gt;&lt;img src="View_Details_Screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>View_Details_Screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-18T15:06:05.986657" elapsed="0.193965"/>
+</kw>
+<doc>Locate and click on the "View Details" button to view submission details.</doc>
+<status status="PASS" start="2025-03-18T15:06:01.622496" elapsed="4.559125"/>
+</kw>
+<kw name="Gracefully Close Browser">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-03-18T15:06:06.182623" elapsed="2.384981"/>
+</kw>
+<status status="PASS" start="2025-03-18T15:06:06.182623" elapsed="2.384981"/>
+</kw>
+<tag>XR-567 login and edit personal information</tag>
+<status status="PASS" start="2025-03-18T15:05:25.681084" elapsed="42.889292"/>
+</test>
+<status status="PASS" start="2025-03-18T15:05:25.233447" elapsed="43.344337"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">XR-567 login and edit personal information</stat>
+</tag>
+<suite>
+<stat name="EditPersonal" id="s1" pass="1" fail="0" skip="0">EditPersonal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
