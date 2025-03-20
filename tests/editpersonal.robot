@@ -18,7 +18,7 @@ ${VIEW_DETAILS_BUTTON}  xpath://button[@data-uxi-button-type='view-detail' and c
 
 *** Test Cases ***
 Login and Edit Personal Information
-     [Tags]  XR-567 login and edit personal information
+     [Tags]  WD-95 login and edit personal information
     Open Browser And Login
     Open Search Tab And Enter Query
     Select Edit Personal Information From Search Results
